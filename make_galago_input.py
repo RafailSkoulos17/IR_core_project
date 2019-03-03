@@ -43,7 +43,7 @@ def article_iter_sections(section, headline, f):
 def build_article():
     # read_file = r'benchmarkY1\benchmarkY1-train\train.pages.cbor'
     read_file = r'test200-train\train.pages.cbor'
-    write_file = '2nd_attempt/article_index.trectext'
+    write_file = 'index_inputs/article_index.trectext'
     with open(write_file, 'wb') as f:
         for page in read_data.iter_pages(open(read_file, 'rb')):
             headline = page.page_name
@@ -58,7 +58,7 @@ def build_article():
 def build_hierarchical():
     # read_file = r'benchmarkY1\benchmarkY1-train\train.pages.cbor'
     read_file = r'test200-train\train.pages.cbor'
-    write_file = '2nd_attempt/hierarchical_index.trectext'
+    write_file = 'index_inputs/hierarchical_index.trectext'
     with open(write_file, 'wb') as f:
         for page in read_data.iter_pages(open(read_file, 'rb')):
             for part in page.skeleton:
@@ -74,7 +74,7 @@ def build_hierarchical():
 def build_toplevel():
     # read_file = r'benchmarkY1\benchmarkY1-train\train.pages.cbor'
     read_file = r'test200-train\train.pages.cbor'
-    write_file = '2nd_attempt/toplevel_index.trectext'
+    write_file = 'index_inputs/toplevel_index.trectext'
     with open(write_file, 'wb') as f:
         for page in read_data.iter_pages(open(read_file, 'rb')):
             for part in page.skeleton:
