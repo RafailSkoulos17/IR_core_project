@@ -1,5 +1,5 @@
    {
-     "query" : "#dirichlet(Transnistria)",
+     "query" : "#dirichlet(Lord of the manor)",
      "numTerms" : 10,
      "index" : "C:/IR_core_project/index_dir.idx",
      } 
