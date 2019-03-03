@@ -1,0 +1,5 @@
+   {
+     "query" : "#dirichlet(Transnistria)",
+     "numTerms" : 10,
+     "index" : "C:/IR_core_project/index_dir.idx",
+     } 

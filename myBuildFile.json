@@ -1,0 +1,10 @@
+   {
+     "fileType" : "trectext",
+     "indexPath" : "C:/IR_core_project/index_dir.idx",
+     "inputPath" : "C:/IR_core_project/2nd_attempt/article_index.trectext",
+	 "fieldIndex"   : true,
+	 "tokenizer"    : {
+    "fields"  : [ "HEADLINE", "TEXT"],
+	
+  }
+}
