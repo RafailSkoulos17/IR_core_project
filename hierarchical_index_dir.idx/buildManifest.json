@@ -1,0 +1,44 @@
+{
+  "corpus" : true,
+  "corpusParameters" : {
+    "blockSize" : 512,
+    "filename" : "C:\\IR_core_project\\hierarchical_index_dir.idx\\corpus",
+    "mergerClass" : "org.lemurproject.galago.core.index.merge.CorpusMerger",
+    "readerClass" : "org.lemurproject.galago.core.index.corpus.CorpusReader",
+    "tokenizer" : {
+      "fields" : [ "HEADLINE" , "TEXT"],
+      "formats" : {
+
+      }
+    },
+    "writerClass" : "org.lemurproject.galago.core.index.corpus.CorpusFolderWriter"
+  },
+  "fieldIndex" : true,
+  "fieldIndexParameters" : {
+    "nonStemmedPostings" : true,
+    "stemmedPostings" : true,
+    "stemmer" : [ "krovetz"]
+  },
+  "fileType" : "trectext",
+  "galagoVersion" : "3.15",
+  "galagoVersionBuildDateTime" : "2018-12-21 16:37",
+  "indexBuildDateTime" : "2019-03-05 16:14",
+  "indexPath" : "C:\\IR_core_project\\hierarchical_index_dir.idx",
+  "inputPath" : [ "C:\\IR_core_project\\index_inputs\\hierarchical_index.trectext"],
+  "nonStemmedPostings" : true,
+  "server" : true,
+  "skipDistance" : 500,
+  "skipping" : true,
+  "stemmedCounts" : false,
+  "stemmedPostings" : true,
+  "stemmer" : [ "krovetz"],
+  "stemmerClass" : {
+    "krovetz" : "org.lemurproject.galago.core.parse.stem.KrovetzStemmer"
+  },
+  "tokenizer" : {
+    "fields" : [ "HEADLINE" , "TEXT"],
+    "formats" : {
+
+    }
+  }
+}
