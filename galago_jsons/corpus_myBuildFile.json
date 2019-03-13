@@ -1,0 +1,14 @@
+{
+  "server": true,
+  "fileType": "trectext",
+  "indexPath": "C:/IR_core_project/indexes/corpus_index_dir",
+  "inputPath": "C:/IR_core_project/big_corpus/index.trectext",
+  "fieldIndex": true,
+  "mode" : "threaded",
+  "tokenizer": {
+    "fields": [
+      "DOCNO",
+      "TEXT"
+    ]
+  }
+}

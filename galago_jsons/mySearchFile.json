@@ -1,0 +1,8 @@
+  {
+   "index": "C:/IR_core_project/indexes/index_dir",
+   "query": "#combine(Political status of Transnistria)",
+   "queryType": "structured",
+   "verbose": true,
+   "requested": 10,
+   "scorer": "bm25"
+     }
