@@ -1,0 +1,11 @@
+   {
+   	 "server": true,
+     "fileType" : "trectext",
+     "indexPath" : "C:/IR_core_project/hierarchical_index_dir.idx",
+     "inputPath" : "C:/IR_core_project/index_inputs/hierarchical_index.trectext",
+	 "fieldIndex"   : true,
+	 "tokenizer"    : {
+    "fields"  : [ "HEADLINE", "TEXT"],
+	
+  }
+}

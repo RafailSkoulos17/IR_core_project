@@ -12,14 +12,16 @@ def write_to_file(text, para_id, headline, f):
     f.write(b'</DOC>\n')
 
 
-def hierarchical_iter_sections(section, headline, f):
+def hierarchical_iter_sections(section, headline, f, qlist):
     headline += '/' + section.heading
     for part in section.children:
         if isinstance(part, read_data.Para):
             para_text = part.get_text()
-            write_to_file(para_text, part.paragraph.para_id, headline, f)
+            if part.paragraph.para_id not in qlist:
+                write_to_file(para_text, part.paragraph.para_id, headline, f)
+                qlist += [part.paragraph.para_id]
         elif isinstance(part, read_data.Section):
-            hierarchical_iter_sections(part, headline, f)
+            hierarchical_iter_sections(part, headline, f, qlist)
 
 
 def toplevel_iter_sections(section, headline, f):
@@ -59,16 +61,19 @@ def build_hierarchical():
     # read_file = r'benchmarkY1\benchmarkY1-train\train.pages.cbor'
     read_file = r'test200-train\train.pages.cbor'
     write_file = 'index_inputs/hierarchical_index.trectext'
+    qlist = []
     with open(write_file, 'wb') as f:
         for page in read_data.iter_pages(open(read_file, 'rb')):
             for part in page.skeleton:
                 if isinstance(part, read_data.Para):
                     page_text = part.get_text()
                     headline = page.page_name
-                    write_to_file(page_text, part.paragraph.para_id, headline, f)
+                    if part.paragraph.para_id not in qlist:
+                        write_to_file(page_text, part.paragraph.para_id, headline, f)
+                        qlist += [part.paragraph.para_id]
                 elif isinstance(part, read_data.Section):
                     headline = page.page_name
-                    hierarchical_iter_sections(part, headline, f)
+                    hierarchical_iter_sections(part, headline, f, qlist)
 
 
 def build_toplevel():
